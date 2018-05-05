@@ -1,0 +1,20 @@
+
+	
+  <form #formRef="ngForm" style="width: 50%">
+     <label >Title</label>
+    <input type="text"  class="form-control"   id="exampleFormControlInput1" placeholder="title" name="title" [(ngModel)]="title" required >
+  
+
+  
+ 
+  <button type="submit" class="btn btn-primary" 
+  (click)="add(title)">Add Category</button>
+  <div *ngFor="let word2 of words2; let in=index" >
+        <div class="form-group">
+          <input type="text" [(ngModel)]="words2[in].value"   name="name{{in}}" class="form-control" #name="ngModel" required />  <button type="button" class="btn btn-primary">update </button> <button type="button" class="btn btn-primary">delete </button>
+          <!--<p [hidden]="words2[in].value">Field is required</p>
+          {{formRef.form.name1}}-->
+        </div>
+        <br />
+    </div>
+</form>

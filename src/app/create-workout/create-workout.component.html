@@ -1,0 +1,28 @@
+
+<form (ngSubmit)="submitForm()" #workoutCreateForm="ngForm">
+	 <h3 >Add workout</h3>
+  <div class="form-group">
+     <label >Title</label>
+    <input type="text" [(ngModel)]="workoutForm.title" class="form-control" id="exampleFormControlInput1" placeholder="title" name="title">
+  </div>
+
+  <div class="form-group">
+     <label >Note</label>
+    <textarea  class="form-control" [(ngModel)]="workoutForm.note"  id="note" name="note"></textarea> 
+  </div>
+
+
+  <div class="form-group">
+    <label >category</label>
+    <select class="form-control" id="category" [(ngModel)]="workoutForm.category" name="category">
+      <option>category1</option>
+      <option>category2</option>
+      <option>category3</option>
+      <option>category4</option>
+      <option>category5</option>
+    </select>
+  </div>
+ 
+ 
+  <button type="submit" class="btn btn-primary mb-2">Add Workout</button>
+</form>
